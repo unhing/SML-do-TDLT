@@ -9,12 +9,13 @@ while valid == 1:
     ans = []
     for i in range(len(pick)):
         ans.append('_')     # khoảng cách tương ứng với số kí tự
-    print("The word you have to guess is: ", *ans, sep='')
+    print("The word you have to guess has", len(pick), "letters")
     tries = 0  # số lần sai trong khoảng cho phép
 
     lst = []
-    while tries < 10 and '_' in ans:
+    while tries < 10:
         count = 0  # số kí tự đúng trong từ đã cho
+        print("Word: ", *ans, sep='')
         letter = input("\nChoose a letter: ").upper()
         while letter in lst:    # kiểm tra xem đã đoán chưa
             letter = input("You have guessed this one. Please choose another letter: ").upper()
@@ -44,6 +45,8 @@ while valid == 1:
                     tries += 1
                     print("Sorry, wrong guess! You have", 10 - tries, "time(s) left")
             print("\nLetters you have guessed:", *lst, sep=' ')
+        else:
+            break
 
     if tries == 10:
         print("\nYou lost! The answer is:", pick)
