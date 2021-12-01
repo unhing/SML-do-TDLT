@@ -13,7 +13,7 @@ while valid == 1:
     tries = 0  # số lần sai trong khoảng cho phép
 
     lst = []
-    while tries < 10 and '_' in ans:
+    while tries < 10:
         count = 0  # số kí tự đúng trong từ đã cho
         print("Word: ", *ans, sep='')
         letter = input("\nChoose a letter: ").upper()
@@ -45,6 +45,8 @@ while valid == 1:
                     tries += 1
                     print("Sorry, wrong guess! You have", 10 - tries, "time(s) left")
             print("\nLetters you have guessed:", *lst, sep=' ')
+        else:
+            break
 
     if tries == 10:
         print("\nYou lost! The answer is:", pick)
