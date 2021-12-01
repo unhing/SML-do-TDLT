@@ -15,7 +15,7 @@ while valid == 1:
     lst = []
     while tries < 10 and '_' in ans:
         count = 0  # số kí tự đúng trong từ đã cho
-        print("Word: "*ans, sep='')
+        print("Word: ", *ans, sep='')
         letter = input("\nChoose a letter: ").upper()
         while letter in lst:    # kiểm tra xem đã đoán chưa
             letter = input("You have guessed this one. Please choose another letter: ").upper()
