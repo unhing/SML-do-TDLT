@@ -1,3 +1,5 @@
+name=input("What's your name") 
+print("Welcome ",name," to Hangman")
 import random
 
 word = ['python', 'coding', 'pycharm', 'apple', 'eye', ]
@@ -57,4 +59,4 @@ while valid == 1:
     while valid != 1 and valid != 0:
         valid = int(input('Invalid. Do you want to play again? Press 1 to play or 0 to exit: '))
 
-print("\nThank you for playing our game!")
+print("\nThank ",name," for playing our game!")
