@@ -1,10 +1,10 @@
 import random
 name=input("What's your name: ")
-print("Welcome", name," This is hangman game")
+print("Welcome", name,"! This is hangman game")
 word = ['python', 'coding', 'pycharm', 'apple', 'eye', ]
-valid = 1
+valid = '1'
 
-while valid == 1:
+while valid == '1':
     pick: str = random.choice(word).upper()   # Chọn từ trong thư viện
 
     ans = []
@@ -54,8 +54,8 @@ while valid == 1:
     else:
         print("\nCongratulations! The word is:", pick)
 
-    valid = int(input('\nDo you want to play again? Press 1 to play or 0 to exit: '))
-    while valid != 1 and valid != 0:
-        valid = int(input('Invalid. Do you want to play again? Press 1 to play or 0 to exit: '))
+    valid = input('\nDo you want to play again? Press 1 to play or 0 to exit: ')
+    while valid != '1' and valid != '0':
+        valid = input('Invalid. Do you want to play again? Press 1 to play or 0 to exit: ')
 
 print("\nThank ",name," for playing our game!")
